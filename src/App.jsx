@@ -54,7 +54,7 @@ const LiveGPSTracker = () => {
       mapRef.current
     );
 
-    const gpsRef = ref(database, "Realtime");
+    const gpsRef = ref(database, "Device-1/Realtime");
     onValue(
       gpsRef,
       (snapshot) => {
@@ -134,7 +134,7 @@ console.log(filteredData)
   
 
   useEffect(() => {
-    const dataRef = ref(database, "Logs");
+    const dataRef = ref(database, "Device-1/Logs");
     const fetchLogs = async () => {
       await new Promise((resolve, reject) => {
         onValue(
